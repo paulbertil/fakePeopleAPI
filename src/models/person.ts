@@ -1,25 +1,6 @@
 import mongoose from 'mongoose';
+import { PersonInterface, PersonModelInterface, PersonDoc } from '../interfaces/Person'
 
-// To use for typescript type checking
-interface PersonInterface {
-    firstName: string;
-    lastName: string;
-    gender: string;
-    age: number;
-}
-
-// attach build method to person model interface
-interface PersonModelInterface extends mongoose.Model<PersonDoc> {
-    buildPerson(attr: PersonInterface): any;
-}
-
-// specify Person Document (instead of any)
-interface PersonDoc extends mongoose.Document {
-    firstName: string;
-    lastName: string;
-    gender: string;
-    age: number;
-}
 
 // Person Schema
 const personSchema = new mongoose.Schema({
