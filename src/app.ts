@@ -14,28 +14,13 @@ if (db_uri) {
     mongoose.connect(db_uri, {
         useCreateIndex: true,
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useFindAndModify: false
     }, () => {
         console.log('connected to mongodb')
     })
 }
 
-
-// const persons = [
-//     { id: 1, name: 'John' },
-//     { id: 2, name: 'Maria' },
-//     { id: 3, name: 'Josef' },
-// ]
-
-// type Person = {
-//     id: number;
-//     firstName: string;
-//     lastName: string;
-//     gender: string;
-//     jobTitle: string;
-//     username: string;
-//     password: string;
-// }
 
 
 // Routes
